@@ -1,0 +1,986 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>593</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>371</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="6" column="0">
+      <widget class="QComboBox" name="comboBox_3">
+       <item>
+        <property name="text">
+         <string>BINARY</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>BINARY_INV</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>TRUNC</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>TOZERO</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>TOZERO_INV</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>OTSU</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>TRIANGLE</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>MASK</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="text">
+        <string>src/2.jpg</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="text">
+        <string>找阈值</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLineEdit" name="lineEdit_3">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="3">
+      <widget class="QPushButton" name="pushButton_6">
+       <property name="text">
+        <string>阈值处理</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QComboBox" name="comboBox_2">
+       <item>
+        <property name="text">
+         <string>GaussianBlur</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>medianBlur</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>双边滤波</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="6" column="2">
+      <widget class="QLineEdit" name="lineEdit_4">
+       <property name="text">
+        <string>255</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="lineEdit_2">
+       <property name="text">
+        <string>3</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="text">
+        <string>滤波</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>读取原图</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QComboBox" name="comboBox">
+       <item>
+        <property name="text">
+         <string>2:1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1:2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>500*500</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="text">
+        <string>放缩</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>灰度图</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>220</y>
+      <width>371</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLineEdit" name="lineEdit_8">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_11">
+       <property name="text">
+        <string>腐蚀</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_8">
+       <property name="text">
+        <string>膨胀</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_9">
+       <property name="text">
+        <string>开运算</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_10">
+       <property name="text">
+        <string>闭运算</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>250</y>
+      <width>371</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="1" column="0">
+      <widget class="QLineEdit" name="lineEdit_11">
+       <property name="text">
+        <string>2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLineEdit" name="lineEdit_5">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QPushButton" name="pushButton_7">
+       <property name="text">
+        <string>边缘检测</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLineEdit" name="lineEdit_7">
+       <property name="text">
+        <string>3</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEdit_6">
+       <property name="text">
+        <string>255</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="pushButton_14">
+       <property name="text">
+        <string>自适应均衡化</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="lineEdit_12">
+       <property name="text">
+        <string>8</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>381</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLineEdit" name="lineEdit_9">
+       <property name="text">
+        <string>255</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_4">
+       <item>
+        <property name="text">
+         <string>MEAN_C</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>GAUSSIAN_C</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_5">
+       <item>
+        <property name="text">
+         <string>BINARY</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>BINARY_INV</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_10">
+       <property name="text">
+        <string>3</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_12">
+       <property name="text">
+        <string>自适应阈值处理</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>-70</y>
+      <width>411</width>
+      <height>391</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/img/Snipaste_2020-07-19_10-38-48.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_13">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>490</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>保存图片</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>310</y>
+      <width>371</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QComboBox" name="comboBox_6">
+       <item>
+        <property name="text">
+         <string>TREE</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>LIST</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>CCOMP</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>EXTERNAL</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_7">
+       <item>
+        <property name="text">
+         <string>NONE</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>SIMPLE</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>TC89_L1</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_13">
+       <property name="text">
+        <string>3</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_14">
+       <property name="text">
+        <string>-1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_15">
+       <property name="text">
+        <string>画轮廓</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>340</y>
+      <width>371</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="0" column="0">
+      <widget class="QComboBox" name="comboBox_8">
+       <item>
+        <property name="text">
+         <string>Rect</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Line</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>MinRect</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Circle</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Ellipse</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>PolyDP</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="pushButton_16">
+       <property name="text">
+        <string>轮廓拟合</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButton_17">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>370</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>上采样</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_18">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>370</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>下采样</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="img.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>GetSrcImg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>130</x>
+     <y>49</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>244</x>
+     <y>253</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>GetGrayImg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>298</x>
+     <y>85</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>244</x>
+     <y>268</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>FindThresh()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>51</x>
+     <y>153</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>249</x>
+     <y>344</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>GetThreshImg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>379</x>
+     <y>187</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>305</x>
+     <y>490</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_7</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>GetCannyImg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>379</x>
+     <y>296</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>314</x>
+     <y>427</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_11</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>GetErodedImg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>136</x>
+     <y>266</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>255</x>
+     <y>360</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_8</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>GetDilateImg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>217</x>
+     <y>266</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>267</x>
+     <y>375</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_9</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>GetOpenImg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>298</x>
+     <y>266</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>305</x>
+     <y>392</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_10</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>GetCloseImg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>379</x>
+     <y>266</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>325</x>
+     <y>407</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ReadSrcImg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>40</x>
+     <y>47</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>130</x>
+     <y>312</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_2</sender>
+   <signal>activated(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ChooseBlurType()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>101</x>
+     <y>117</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>114</x>
+     <y>398</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_3</sender>
+   <signal>activated(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ChooseThreshType()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>73</x>
+     <y>185</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>80</x>
+     <y>416</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox</sender>
+   <signal>activated(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ChooseRation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>25</x>
+     <y>83</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>99</x>
+     <y>433</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>GetResizeImg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>165</x>
+     <y>74</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>238</x>
+     <y>287</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>GetBlurImg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>298</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>258</x>
+     <y>305</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_4</sender>
+   <signal>activated(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ChooseAdapThreshType()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>147</x>
+     <y>224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>108</x>
+     <y>446</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_5</sender>
+   <signal>activated(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ChooseAdapBinaryType()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>240</x>
+     <y>224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>143</x>
+     <y>467</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_12</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>GetAdaptThreImg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>389</x>
+     <y>226</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>445</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_13</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>GetSaveImg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>36</x>
+     <y>532</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>67</x>
+     <y>588</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_14</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>GetCLAHEImg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>298</x>
+     <y>325</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>281</x>
+     <y>514</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_6</sender>
+   <signal>activated(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ChooseDrawContourMode1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>41</x>
+     <y>354</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>83</x>
+     <y>481</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_7</sender>
+   <signal>activated(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ChooseDrawContourMode2()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>158</x>
+     <y>354</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>139</x>
+     <y>496</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_15</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>GetContoursImg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>379</x>
+     <y>356</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>380</x>
+     <y>543</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_8</sender>
+   <signal>activated(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ChooseFittingShape()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>52</x>
+     <y>373</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>97</x>
+     <y>513</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_16</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>GetFittingImg()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>221</x>
+     <y>379</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>306</x>
+     <y>522</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <signal>lineEdit_kernel(QString)</signal>
+  <signal>signal1()</signal>
+  <slot>GetSrcImg()</slot>
+  <slot>GetGrayImg()</slot>
+  <slot>GetResizeImg()</slot>
+  <slot>GetBlurImg()</slot>
+  <slot>FindThresh()</slot>
+  <slot>GetThreshImg()</slot>
+  <slot>GetCannyImg()</slot>
+  <slot>GetErodedImg()</slot>
+  <slot>GetDilateImg()</slot>
+  <slot>GetOpenImg()</slot>
+  <slot>GetCloseImg()</slot>
+  <slot>ReadSrcImg()</slot>
+  <slot>MyPyQT_Form()</slot>
+  <slot>slot1()</slot>
+  <slot>ChooseRation()</slot>
+  <slot>ChooseBlurType()</slot>
+  <slot>ChooseThreshType()</slot>
+  <slot>ChooseAdapThreshType()</slot>
+  <slot>ChooseAdapBinaryType()</slot>
+  <slot>GetAdaptThreImg()</slot>
+  <slot>GetSaveImg()</slot>
+  <slot>GetCLAHEImg()</slot>
+  <slot>ChooseDrawContourMode1()</slot>
+  <slot>ChooseDrawContourMode2()</slot>
+  <slot>ChooseFittingShape()</slot>
+  <slot>GetContoursImg()</slot>
+  <slot>GetFittingImg()</slot>
+ </slots>
+</ui>
